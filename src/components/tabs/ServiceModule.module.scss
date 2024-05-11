@@ -16,6 +16,7 @@
 }
 .service_box {
     max-width: 25%;
+    min-width: 10em;
 }
 .service_point {
     margin-top: 5em;
@@ -66,4 +67,13 @@
         margin-top: 3em;
         margin-bottom: 3em;
     }
+    .service_point .ico {
+        font-size: 1.5em;
+    }
 }
+@media #{$narrow-window} {
+    .footer__content {
+        flex-direction: column;
+    }
+}
+

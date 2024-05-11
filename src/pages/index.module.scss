@@ -1,24 +1,25 @@
 //
 // COLORS
 //
+@import '../components/common';
 
-$rgb-background: white;
-$rgb-color: black;
-$rgb-primary: #495566;
-$rgb-primary-dark: #2c333d;
-$rgb-primary-light: #66768f;
-$rgb-secondary: #4E5283;
-$rgb-grey: #888888;
-$rgb-grey-dark: #333333;
-$rgb-grey-light: #DBDBDB;
-$rgb-grey-lighter: #F3F3F3;
-$rgb-red: #f66f6f;
-$rgb-red-dark: #900909;
-$rgb-red-light: #f99f9f;
-$rgb-green: #87deab;
-$rgb-green-dark: #217845;
-$rgb-green-light: #b9ecce;
-$rgb-yellow: #E9D998;
+//$rgb-background: white;
+//$rgb-color: black;
+//$rgb-primary: #495566;
+//$rgb-primary-dark: #2c333d;
+//$rgb-primary-light: #66768f;
+//$rgb-secondary: #4E5283;
+//$rgb-grey: #888888;
+//$rgb-grey-dark: #333333;
+//$rgb-grey-light: #DBDBDB;
+//$rgb-grey-lighter: #F3F3F3;
+//$rgb-red: #f66f6f;
+//$rgb-red-dark: #900909;
+//$rgb-red-light: #f99f9f;
+//$rgb-green: #87deab;
+//$rgb-green-dark: #217845;
+//$rgb-green-light: #b9ecce;
+//$rgb-yellow: #E9D998;
 
 .menu_margin {
   margin-top: 4em;
@@ -31,18 +32,27 @@ $rgb-yellow: #E9D998;
 }
 
 .footer a {
-  color: $rgb-yellow;
+  color: $rgb-primary-contrast;
 }
 .footer a:hover {
   color: white;
 }
 .footer__content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  vertical-align: center;
+  vertical-align: middle;
   align-items: center;
 }
 .footer__content p {
   flex-grow: 1;
   text-align: center;
+}
+
+@media #{$desktop-window} {
+}
+@media #{$narrow-window} {
+  .footer__content {
+    flex-direction: column;
+  }
 }
