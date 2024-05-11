@@ -1,0 +1,151 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/*
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Titillium', sans-serif;
+}
+
+.navbar {
+  display: none;
+  background-color: #303846;
+  padding: 20px 0 20px 0;
+}
+
+.navbar__brand {
+  margin: auto;
+}
+
+* {
+    box-sizing: border-box; }
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'Titillium Web', Helvetica, Arial, sans-serif; }
+
+.panel, body {
+    background: white;
+    color: black; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #333333;
+    font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none; }
+
+a:hover {
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+
+a:hover, a:focus {
+    color: #2c333d; }
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2%; }
+
+section {
+    padding: 2em 0;
+    box-sizing: border-box; }
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2%; }
+
+#toTop {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 51px;
+    height: 51px;
+    border: none;
+    text-indent: 100%;
+    background: url("/img/ui.totop.png") no-repeat left top; }
+
+#toTopHover {
+    background: url("/img/ui.totop.png") no-repeat left -51px;
+    width: 51px;
+    height: 51px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0); }
+
+#toTop:active,
+#toTop:focus {
+    outline: none; }
+
+#footer {
+    background-color: #2a3650;
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: space-between;
+    vertical-align: center;
+    align-items: center;
+}
+.footer__content p {
+    flex-grow: 1;
+}
+
+#footer a {
+    color: white;
+    font-weight: 700;
+}
+
+#footer section {
+    margin-bottom: 0;
+}
+
+*/

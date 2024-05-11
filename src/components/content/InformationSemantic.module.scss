@@ -1,0 +1,35 @@
+//
+// ------------------------------------------------------------
+// SCSS
+// ------------------------------------------------------------
+//
+@import '../common';
+/*
+  ------------------------------------------------------------
+  INFORMATION
+  ------------------------------------------------------------
+*/
+.panel {
+    display: block;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.panel div:global(.ui.accordion) div:global(.title){
+    background-color: $rgb-primary;
+    color: $rgb-primary-contrast;
+}
+.panel div:global(.ui.accordion) div:global(.active.title){
+    background-color: $rgb-primary;
+    color: $rgb-primary-contrast;
+}
+.panel_body {
+    color: $rgb-primary;
+}
+.panel__title {
+    display: inline-block;
+    font-size: 125%;
+}
+.panel__description {
+    color: $rgb-primary;
+}

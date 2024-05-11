@@ -1,0 +1,69 @@
+//
+// ------------------------------------------------------------
+// SCSS
+// ------------------------------------------------------------
+//
+@import '../common';
+/*
+  ------------------------------------------------------------
+  SERVICE POINT
+  ------------------------------------------------------------
+*/
+.service_bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.service_box {
+    max-width: 25%;
+}
+.service_point {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    text-align: center;
+}
+.service_point i {
+    position: relative;
+    overflow: hidden;
+}
+.service_point .ico {
+    @include vendor-prefix(transform, rotate(45deg));
+    font-size: 2.5em;
+    color: $rgb-primary-contrast;
+    line-height: 2.5em;
+    background: $rgb-primary;
+    width: 2.5em;
+    height: 2.5em;
+    text-align: center;
+    border: solid 4px $rgb-secondary-lightest;
+    outline: 1px solid $rgb-primary;
+    margin: 0 auto 1em;
+}
+.service_point:hover .ico {
+    color: $rgb-primary-darkest;
+    background: $rgb-primary-lightest;
+    cursor: pointer;
+    @include vendor-prefix(transition, ease-out 0.5s);
+}
+.service_point .ico:hover {
+    color: $rgb-primary-darkest;
+    background: $rgb-primary-lightest;
+    cursor: pointer;
+    @include vendor-prefix(transition, ease-out 0.5s);
+}
+.service_point .ico i {
+    @include vendor-prefix(transform, rotate(-45deg));
+}
+.service_point h2 {
+    color: $rgb-primary;
+}
+.service_point p {
+    padding: 0 0.5em;
+    color: $rgb-primary-darkest;
+}
+@media #{$ipad-window} {
+    .service_point {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+}

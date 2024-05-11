@@ -1,0 +1,65 @@
+//
+// ------------------------------------------------------------
+// SCSS
+// ------------------------------------------------------------
+//
+@import '../common';
+/*
+  ------------------------------------------------------------
+  TAB PANEL
+  ------------------------------------------------------------
+*/
+.tab_bar {
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+.tab_bar h3 {
+  font-size: 200%;
+}
+.tab__title {
+  display: block;
+  font-size: 4em;
+  width: 1.5em;
+  text-align: center;
+  color: $rgb-primary;
+}
+
+.nav_tabs :global(.nav-link.active) .tab__title i {
+  color: $rgb-primary;
+}
+.tab__title i {
+  color: $rgb-primary-lightest;
+}
+.nav_tabs :global(.nav-link) .tab__title:hover i {
+  color: $rgb-primary-light;
+}
+
+.nav_tabs {
+  margin-top: 0;
+  border-bottom: none;
+}
+.nav_tabs li + li {
+  margin: 0;
+}
+
+.tab_pane {
+  text-align: center;
+  margin: 0;
+  border: 1px solid $rgb-grey-light;
+  padding: 1.5em;
+}
+.tab_pane > div > h3 {
+  color: $rgb-primary;
+  font-weight: 500;
+}
+.tab_pane > div > p {
+  color: $rgb-primary-darkest;
+  font-size: 150%;
+}
+
+@media #{$ipad-window} {
+  .tab__title {
+    font-size: 2em;
+    width: 1.25em;
+  }
+}

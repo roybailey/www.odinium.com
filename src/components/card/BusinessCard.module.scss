@@ -1,0 +1,51 @@
+//
+// ------------------------------------------------------------
+// SCSS
+// ------------------------------------------------------------
+//
+@import '../common';
+/*
+  ------------------------------------------------------------
+  FEED CARD
+  ------------------------------------------------------------
+*/
+
+.card {
+  text-align: center;
+  background-color: $rgb-background;
+}
+
+.header {
+  color: $rgb-primary-darkest;
+  background-color: $rgb-background;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.avatar {
+  display: flex;
+  margin: 0 0.5em;
+}
+
+.content {
+  background-color: $rgb-background;
+  padding: 1em;
+}
+
+.footer {
+  background-color: $rgb-background;
+}
+
+.button_group {
+  flex-wrap: wrap;
+}
+
+.button_group button {
+  background-color: $rgb-primary;
+  border: none;
+}
+
+.button_group button:hover {
+  background-color: $rgb-primary-lightest;
+  border: none;
+}

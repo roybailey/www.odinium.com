@@ -1,0 +1,103 @@
+//
+// ------------------------------------------------------------
+// SCSS
+// ------------------------------------------------------------
+//
+@import '../common';
+/*
+  ------------------------------------------------------------
+  BULLET LIST
+  ------------------------------------------------------------
+*/
+$bullet-size: 7em;
+$arrow-size: 2em;
+$content-margin: calc($bullet-size/2)+$arrow-size;
+
+.bullet_list {
+    width: auto;
+}
+.bullet_item__rightArea {
+    margin-left: calc($bullet-size/2);
+    border-left: solid 1px $rgb-primary;
+    padding-bottom: 3em;
+    :last-child {
+        padding-bottom: 0;
+        margin-bottom: 1em;
+    }
+}
+.bullet_center {
+    float: left;
+    font-size: 1em;
+    color: $rgb-primary-contrast;
+    background: $rgb-primary;
+    text-align: center;
+    width: 7em;
+    height: 7em;
+    line-height: 1em;
+    padding: 3em 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+.arrowpart {
+    float: left;
+    margin-top: 1.5em;
+    margin-left: 0px;
+    width: 0;
+    height: 0;
+    border-top: $arrow-size solid transparent;
+    border-bottom: $arrow-size solid transparent;
+    border-right: $arrow-size solid $rgb-primary;
+}
+.bullet_content {
+    width: auto;
+    background: $rgb-background;
+    border-left: solid 0.25em $rgb-primary;
+    border-bottom: solid 0.25em $rgb-primary;
+    padding: 1.5em 2em 1em;
+    margin-left: $content-margin;
+    text-align: left;
+}
+.bullet_tag {
+    position: relative;
+    float: right;
+    top: -2em;
+    right: -2em;
+    padding: 0.25em 0.75em;
+    color: $rgb-primary-contrast;
+    background: $rgb-primary;
+    border-top-right-radius: 0.4em;
+    //text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+.bullet_content__p {
+    color: $rgb-primary;
+    line-height: 1.5em;
+}
+.bullet_content__a {
+    color: $rgb-primary;
+    line-height: 1.5em;
+    font-weight: 600;
+}
+.bullet_content__h4 {
+    color: $rgb-primary;
+    padding-bottom: 0.25em;
+    font-size: 150%;
+}
+.bullet_content__h5 {
+    color: $rgb-primary;
+}
+.bullet_tag__p {
+    color: $rgb-primary-contrast;
+    background: $rgb-primary;
+    font-size: 1em;
+    font-weight: 600;
+}
+.bullet_tag__a {
+    color: $rgb-primary-contrast;
+    background: $rgb-primary;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: underline;
+}

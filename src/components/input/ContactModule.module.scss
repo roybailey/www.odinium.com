@@ -1,0 +1,104 @@
+//
+// ------------------------------------------------------------
+// SCSS
+// ------------------------------------------------------------
+//
+@import '../common';
+/*
+  ------------------------------------------------------------
+  CONTACT
+  ------------------------------------------------------------
+*/
+.contact_area {
+    font-weight: normal;
+}
+.contact_section {
+    margin-top: 4em;
+    text-align: center;
+}
+.contact_section h1 {
+    color: $rgb-primary;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.contact_form {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.contact_form legend {
+    font-size: 15px;
+    color: $rgb-grey-light;
+}
+.contact_form label {
+    margin-bottom: 28px;
+    display: block;
+}
+.contact_form label span {
+    float: left;
+    width: 100px;
+    color: $rgb-grey;
+}
+.contact_form input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid $rgb-grey-light;
+    padding-left: 4px;
+    font-weight: normal;
+}
+.contact_form textarea {
+    width: 100%;
+    height: 100px;
+    padding-left: 4px;
+    font-weight: normal;
+}
+.submit_btn {
+    padding: 12px;
+    float: left;
+    width: 100px;
+    background-color: $rgb-primary;
+    border: none;
+}
+.submit_btn:hover {
+    background-color: $rgb-primary-lightest;
+}
+.success {
+    background: $rgb-green-light;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid $rgb-green;
+    border-radius: 5px;
+    font-weight: normal;
+}
+.error {
+    background: $rgb-red-light;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid $rgb-red;
+    border-radius: 5px;
+    font-weight: normal;
+}
+.contact_text {
+    text-align: right;
+    margin-top: 48px;
+}
+.contact_text p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.contact_text h3 {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.contact_info {}
+.contact_info li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.map_panel_heading {
+    background-color: $rgb-secondary;
+}
+.copyright_section {
+    padding-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
