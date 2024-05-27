@@ -77,16 +77,20 @@ export default function Homepage() {
     // CONTACT
     // ------------------------------------------------------------
 
-    const WebsiteContact = (props) => <ContactModule contact={{
-        title: 'Contact US',
-        footnote: `How may we help you?`,
-        follow: 'Follow The Founder',
-        address: [
-            "London, UK",
-            "+44 7710 379914",
-        ],
-        social: social
-    }}/>
+    const WebsiteContact = (props) => <ContactModule
+            action={props.action}
+            method={props.method}
+            contact={{
+            title: 'Contact US',
+            footnote: `How may we help you?`,
+            follow: 'Follow The Founder',
+            address: [
+                "London, UK",
+                "+44 7710 379914",
+            ],
+            social: social,
+        }}
+        />
 
     //
     // ABOUT
@@ -188,7 +192,7 @@ export default function Homepage() {
                 </Section>
 
                 <Section id="CONTACT">
-                    <WebsiteContact />
+                    <WebsiteContact action="javascript:handleContactForm()" method="post"/>
                 </Section>
 
                 <WebsiteFooter />
