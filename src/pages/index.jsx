@@ -78,6 +78,7 @@ export default function Homepage() {
     // ------------------------------------------------------------
 
     const WebsiteContact = (props) => <ContactModule
+            to={props.to}
             action={props.action}
             method={props.method}
             contact={{
@@ -192,7 +193,7 @@ export default function Homepage() {
                 </Section>
 
                 <Section id="CONTACT">
-                    <WebsiteContact action="javascript:handleContactForm()" method="post"/>
+                    <WebsiteContact to="odinium.com"/>
                 </Section>
 
                 <WebsiteFooter />

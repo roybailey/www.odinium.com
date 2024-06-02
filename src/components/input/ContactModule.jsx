@@ -13,9 +13,10 @@ export default ((props) => {
 
     // Step 1: Set up state
     const [formData, setFormData] = useState({
+        to: props.to,
         name: '',
         email: '',
-        phone: '',
+        number: '',
         message: ''
     });
 
@@ -40,7 +41,7 @@ export default ((props) => {
         console.log('Form submitted:', formData);
         // Add your custom logic here
         // The URL of the API endpoint
-        const apiUrl = 'https://api.odinium.com/email/v1/contact';
+        const apiUrl = 'http://localhost:8181/email/v1/contact';
 
         // Make the API call using fetch
         fetch(apiUrl, {
@@ -53,23 +54,28 @@ export default ((props) => {
             .then(response => {
                 // Check if the response is OK (status code 200-299)
                 if (!response.ok) {
-                    throw new Error('Network response was not ok ' + response.statusText);
+                    throw new Error('We are unable to send contact information at this time ' + response.statusText);
                 }
                 // Parse the response as JSON
                 return response.json();
             })
             .then(data => {
                 // Handle the data (success case)
+                if(data["sent"] === false) {
+                    console.error('There was a problem with the email operation:', response);
+                    throw new Error('We are unable to send contact information at this time ' + response.statusText);
+                }
                 console.log('Success:', data);
                 document.getElementById("contact_form").style.display = 'none';
-                document.getElementById("contact_form_message").textContent = 'Thanks!  Your details have been sent to us.<br/>'+JSON.stringify(data, null, 2);
+                document.getElementById("contact_form_message").textContent = 'Thanks!  Your details have been sent to us : '+data["message"];
                 document.getElementById("contact_form_message").classList.add(styles.success);
             })
             .catch(error => {
                 // Handle any errors (network or other)
                 console.error('There was a problem with the fetch operation:', error);
+                console.error('There was a problem with the fetch operation:', error.message);
                 document.getElementById("contact_form").style.display = 'none';
-                document.getElementById("contact_form_message").textContent = 'Contact service is not currently available, please try again another time';
+                document.getElementById("contact_form_message").textContent = error;
                 document.getElementById("contact_form_message").classList.add(styles.error);
             });
     };
@@ -85,6 +91,15 @@ export default ((props) => {
                   <form onSubmit={handleSubmit}>
                       <fieldset id="contact_form">
                           <div id="result"></div>
+                          <label htmlFor="to">
+                              <input
+                                  id="to"
+                                  type="text"
+                                  name="to"
+                                  defaultValue={formData.to}
+                                  hidden={true}
+                              />
+                          </label>
                           <label htmlFor="name">
                               <input
                                   id="name"
@@ -107,13 +122,13 @@ export default ((props) => {
                               />
                           </label>
 
-                          <label htmlFor="phone">
+                          <label htmlFor="number">
                               <input
-                                  id="phone"
+                                  id="number"
                                   type="text"
-                                  name="phone"
+                                  name="number"
                                   placeholder="Phone Number"
-                                  value={formData.phone}
+                                  value={formData.number}
                                   onChange={handleChange}
                               />
                           </label>
@@ -128,7 +143,8 @@ export default ((props) => {
                               ></textarea>
                           </label>
 
-                          <button className={"button button--primary "+styles.submit_btn} id="submit_btn">Submit</button>
+                          <button className={"button button--primary " + styles.submit_btn} id="submit_btn">Submit
+                          </button>
                       </fieldset>
                   </form>
               </div>
@@ -138,8 +154,8 @@ export default ((props) => {
                   <p>{contact.footnote}</p>
                   <h3>contact info</h3>
                   <ul className={styles.contact_info}>
-                      {contact.address.map((detail,idx)=>
-                        <li key={'contact.detail.'+idx}>{detail}</li>
+                      {contact.address.map((detail, idx) =>
+                          <li key={'contact.detail.' + idx}>{detail}</li>
                       )}
                   </ul>
                   <h3>{contact.follow}</h3>
