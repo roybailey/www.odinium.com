@@ -21,6 +21,9 @@ import
 
 export default function Homepage() {
 
+    const DEPLOY = process.env.NODE_ENV;
+    const API_BASE = (DEPLOY === "production")? "https://api.odinium.com" : "http://localhost:8181";
+
     const social = {
         twitter: "http://twitter.com/roybaileybiz",
         linkedin: "https://www.linkedin.com/in/roybailey",
@@ -79,6 +82,7 @@ export default function Homepage() {
 
     const WebsiteContact = (props) => <ContactModule
             to={props.to}
+            apiUrl={props.apiUrl}
             action={props.action}
             method={props.method}
             contact={{
@@ -193,7 +197,7 @@ export default function Homepage() {
                 </Section>
 
                 <Section id="CONTACT">
-                    <WebsiteContact to="odinium.com"/>
+                    <WebsiteContact to="odinium.com" apiUrl={API_BASE+"/email/v1/contact"}/>
                 </Section>
 
                 <WebsiteFooter />

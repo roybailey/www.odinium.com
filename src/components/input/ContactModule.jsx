@@ -7,9 +7,9 @@ import styles from './ContactModule.module.scss'
 
 export default ((props) => {
 
-    const { contact, action, method } = props;
+    const { contact, action, method, apiUrl } = props;
 
-    console.log("Rendering ContactContainer");
+    console.log("Rendering ContactContainer for "+apiUrl);
 
     // Step 1: Set up state
     const [formData, setFormData] = useState({
@@ -39,10 +39,6 @@ export default ((props) => {
     // Example JavaScript function to run on form submission
     const sendContactDetails = () => {
         console.log('Form submitted:', formData);
-        // Add your custom logic here
-        // The URL of the API endpoint
-        const apiUrl = 'http://localhost:8181/email/v1/contact';
-
         // Make the API call using fetch
         fetch(apiUrl, {
             method: 'POST', // Set the method to POST
