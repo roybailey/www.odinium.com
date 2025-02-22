@@ -1,0 +1,23 @@
+---
+const { year = '2025' } = Astro.props;
+---
+
+<!-- Store the message prop as a data attribute. -->
+<odinium-copyright data-year={year}>
+    <div id="copyright" class="flex flex-col md:flex-row gap-10 items-start justify-end">
+
+    </div>
+</odinium-copyright>
+
+<script>
+    class Copyright extends HTMLElement {
+        connectedCallback() {
+            // Read the message from the data attribute.
+            const year = this.dataset.year;
+            const element = this.querySelector('#copyright');
+            element.textContent = `Copyright (c) ${year}`;
+        }
+    }
+
+    customElements.define('astro-copyright', Copyright);
+</script>
