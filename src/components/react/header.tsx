@@ -1,6 +1,6 @@
 "use client";
 
-import {Button} from "@/components/ui/button.tsx";
+import {Button} from "@/components/react/ui/button.tsx";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -8,7 +8,7 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu.tsx";
+} from "@/components/react/ui/navigation-menu.tsx";
 import {Menu, MoveRight, X} from "lucide-react";
 import {useState} from "react";
 import ClickOutside from "@/components/react/click-outside.tsx";

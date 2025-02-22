@@ -1,0 +1,51 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Talent Management",
+    description:
+      "We can help with hiring, upskilling, coaching and agile practices.",
+    icon: "icon-arrow-down",
+  },
+  {
+    title: "Application Front End",
+    description:
+      "UX and UI design, front end Web, Mobile, or Desktop Application development.",
+    icon: "icon-arrow-down",
+  },
+  {
+    title: "Backend API Services",
+    description:
+      "Micro services to support the UI and integrations to other systems or products.",
+    icon: "icon-arrow-down",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Software Engineering Consultancy
+  </h2>
+  <p class="text-lg mt-4 text-slate-600 italic">
+    Odinium supports your software engineering teams providing pragmatic assessments and advice to
+    enhance the performance and your product deliveries...
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mb-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

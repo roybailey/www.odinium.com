@@ -1,8 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Hero } from '../components/react/hero'
+import Layout from '@/layouts/Layout.astro';
+import { Hero } from '@/components/react/hero'
+import Features from '@/components/Features.astro';
+import ContactForm from '@/components/ContactForm.astro';
 ---
 
 <Layout>
 	<Hero client:only="react" />
+	<div class="flex flex-col p-8 gap-8 items-center justify-center text-center">
+		<!--<Features />-->
+		<ContactForm />
+	</div>
 </Layout>
