@@ -197,7 +197,7 @@ export default function Homepage() {
                 </Section>
 
                 <Section id="CONTACT">
-                    <WebsiteContact to="odinium.com" apiUrl={API_BASE+"/email/v1/contact"}/>
+                    <WebsiteContact to="odinium.com" apiUrl={API_BASE+"/email-api/v1/contact"}/>
                 </Section>
 
                 <WebsiteFooter />
