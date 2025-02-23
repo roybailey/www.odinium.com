@@ -221,3 +221,13 @@
     --sl-color-gray-7: var(--color-gray-200);/* #f3f7f9; */
     --sl-color-black: #ffffff;
 }
+
+
+/* Declare a custom CSS class to make the icon look right */
+.svg-inline--fa {
+    overflow: visible;
+    box-sizing: content-box;
+    display: inline-block;
+    height: 1em;
+    vertical-align: -0.125em;
+}

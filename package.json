@@ -32,6 +32,9 @@
     "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@iconify-json/fa": "^1.2.1",
+    "@iconify-json/lucide": "^1.2.26",
+    "@iconify-json/svg-spinners": "^1.2.2",
     "@types/node": "^22.13.5"
   }
 }

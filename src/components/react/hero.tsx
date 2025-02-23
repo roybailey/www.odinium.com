@@ -3,21 +3,19 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/react/ui/button.tsx'
 import { Link } from '@/components/react/link.tsx'
 
+interface HeroProps {
+    title:string,
+    items:string,
+    message:string,
+    children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined;
+    ctaHref:string,
+    ctaAlt:string,
+}
 
-export const Hero = (props: React.ComponentProps<any>) => {
+export const Hero = (props: HeroProps) => {
     const [titleNumber, setTitleNumber] = useState(0)
     const titles = useMemo(
-        () => [
-            'Architecture',
-            'Automation',
-            'DevOps',
-            'Front End',
-            'Full Stack',
-            'Micro Services',
-            'Mobile Apps',
-            'Testing',
-            'Web Applications'
-        ],
+        () => props.items.split(','),
         []
     )
 
@@ -39,7 +37,7 @@ export const Hero = (props: React.ComponentProps<any>) => {
                     <div className="flex flex-col gap-4">
                         <h1 className="font-regular max-w-2xl text-center text-5xl tracking-tighter md:text-7xl">
                             <span className="text-spektr-cyan-50">
-                                Software Engineering
+                                {props.title}
                             </span>
                             <span className="relative flex w-full justify-center overflow-hidden text-center md:pt-1 md:pb-4">
                                 &nbsp;
@@ -74,16 +72,16 @@ export const Hero = (props: React.ComponentProps<any>) => {
                         </h1>
 
                         <p className="text-muted-foreground max-w-2xl text-center text-lg leading-relaxed tracking-tight md:text-xl">
-
+                            {props.children}
                         </p>
                     </div>
                     <div className="flex flex-row gap-3">
                         <Link
-                            href="https://roybailey.biz"
+                            href={props.ctaHref}
                             className="flex flex-row items-center"
                         >
                             <Button variant="default" size="lg">
-                                About the Founder
+                                {props.ctaAlt}
                             </Button>
                         </Link>
                     </div>
