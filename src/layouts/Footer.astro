@@ -1,5 +1,5 @@
 ---
-import AstroCopyright from '../components/Copyright.astro'
+const year = new Date().getFullYear()
 ---
 
 <div class="w-full pt-10 pb-20 mt-16">
@@ -16,7 +16,7 @@ import AstroCopyright from '../components/Copyright.astro'
 				</div>
 			</div>
 			<div class="flex flex-col md:flex-row gap-10 items-start justify-end text-right text-sm italic">
-				Copyright (c) 2025 Odinium Ltd, a private UK company providing consultancy on Software projects.<br/>
+				Copyright &copy; {year} Odinium Ltd, a private UK company providing consultancy on Software projects.<br/>
 				Get in touch if you need to hire an experienced Management and Software Engineering team.
 			</div>
 		</div>

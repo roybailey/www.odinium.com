@@ -1,5 +1,6 @@
 ---
-import Logo from "../components/Logo.astro";
+import Logo from "@/components/Logo.astro";
+import ThemeSelect from "@/layouts/ThemeSelect.astro";
 ---
 
 <header class="w-full z-40 sticky top-0 left-0 bg-background shadow-primary dark:shadow-white shadow-b-2 mb-10 px-4">
@@ -8,10 +9,11 @@ import Logo from "../components/Logo.astro";
 		<div class="flex-shrink-0">
 			<Logo />
 		</div>
-		<!--<div class="flex-1 flex items-center px-8 hidden lg:inline">-->
-		<!--	HeaderMainMenu-->
-		<!--</div>-->
+		<div class="flex-1 flex items-center px-8 hidden lg:inline">
+			User Centric Design Software Consultancy
+		</div>
 		<div class="flex-shrink-0 flex flex-row items-center justify-between gap-4 pl-4">
+			<ThemeSelect />
 		</div>
 
 	</div>
