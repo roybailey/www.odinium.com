@@ -1,16 +1,21 @@
-# Astro Starter Kit: Basics
+# www.odinium.com
 
-```sh
-npm create astro@latest -- --template basics
-```
+This website is built using [Astro](https://docs.astro.build), a modern static website generator.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Users Guide
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+* Visit deployed website at [odinium.com](https://odinium.com)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Developers Guide
+
+* `npm install`
+* `npm start` to run locally on port `3062`
+
+### Deployment
+
+* see [GitHub Deployment Action](./.github/workflows/deploy.yml)
+* see [Astro Deploy to GitHub Pages](https://docs.astro.build/en/guides/deploy/github/)
+
 
 ## 🚀 Project Structure
 
@@ -43,6 +48,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

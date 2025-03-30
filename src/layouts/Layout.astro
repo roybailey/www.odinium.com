@@ -1,6 +1,6 @@
 ---
 import '../assets/css/global.css'
-import ThemeManager from "./ThemeManager.astro";
+import {SEO} from "astro-seo";
 import ThemeSelect from "./ThemeSelect.astro";
 import Header from "./Header.astro"
 import Footer from "./Footer.astro"
@@ -9,11 +9,39 @@ import Footer from "./Footer.astro"
 <!doctype html>
 <html lang="en">
 	<head>
+		<SEO
+			title="Software Engineering | Software Engineering Management Consultancy | Website Design | Kotlin, Neo4j, React, AstroJS Development"
+			description="Experienced Software Consultancy specializing in Kotlin, Neo4j, React, and AstroJS. Passionate about building scalable backends and high-performance front-end applications. Available for consulting, software development, and technical leadership."
+			openGraph={{
+				basic: {
+					title: "Odinium Ltd Software Engineering Consultancy",
+					description: "We provide expert software consulting in Kotlin, Neo4j, React, and AstroJS. Build scalable applications with our experienced development team.",
+					type: "business.business",
+					url: "https://odinium.com",
+					image: "https://roybailey.biz/img/rb-profile-2021.png",
+				}
+			}}
+			twitter={{
+				creator: "@roybaileybiz"
+			}}
+			extend={{
+				// extending the default link tags
+		        link: [{ rel: "icon", href: "/favicon.ico" }],
+				// extending the default meta tags
+				meta: [
+					{
+						name: "twitter:image",
+						content: "https://roybailey.biz/img/rb-profile-2021.png",
+					},
+					{ name: "twitter:title", content: "Roy Bailey" },
+					{ name: "twitter:description", content: "Software Engineer and Software Engineering Manager" },
+				],
+			}}
+		/>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>Odinium Ltd</title>
-		<!--<ThemeManager defaultTheme="auto" />-->
 	</head>
 	<body>
 		<main class="mx-auto max-w-7xl">
